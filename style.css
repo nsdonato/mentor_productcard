@@ -104,19 +104,22 @@ picture > img {
   font-family: var(--font-monserrat);
   font-size: 0.8rem;
   align-self: center;
+  margin-top: 0.5rem;
 }
 
 button {
   display: flex;
+  gap: 0.5rem;
   grid-column: 2 / 6;
   grid-row: 10;
   background-color: var(--primary-dark-cyan-color);
   color: var(--white-color);
-  padding: 15px 92px;
+  padding: 15px 72px;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: var(--font-monserrat);
   font-size: 0.9rem;
+  justify-content: center;
 }
 
 button:hover {
@@ -147,10 +150,5 @@ button:hover {
     grid-row: 1 / 12;
     grid-column: 2;
     grid-template-columns: 2rem 7rem 2rem 4rem 3rem 2rem;
-  }
-
-  button {
-    padding: 15px 72px;
-    gap: 0.5rem;
   }
 }
