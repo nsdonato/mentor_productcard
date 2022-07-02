@@ -12,6 +12,7 @@
   --very-dark-blue: hsl(212, 21%, 14%);
   --font-fraunces: "Fraunces", serif;
   --font-monserrat: "Montserrat", sans-serif;
+  --secondary-dark-cyan-color: hsl(158, 42%, 18%);
 }
 
 * {
@@ -47,9 +48,11 @@ picture {
 }
 
 picture > img {
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
+
 .card {
   display: contents;
   grid-column: 2 / 7;
@@ -114,4 +117,40 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: var(--font-monserrat);
   font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: var(--secondary-dark-cyan-color);
+}
+
+@media screen and (min-width: 90rem) {
+  article {
+    grid-template-columns: 20rem 20rem;
+  }
+
+  article,
+  .card {
+    grid-template-rows: 2rem repeat(2, 1rem) 5rem 1rem 5rem repeat(3, 2rem) 3rem 1rem;
+  }
+
+  picture,
+  .card {
+    grid-row: 1 / 12;
+  }
+
+  picture {
+    grid-column: 1;
+  }
+
+  .card {
+    display: grid;
+    grid-row: 1 / 12;
+    grid-column: 2;
+    grid-template-columns: 2rem 7rem 2rem 4rem 3rem 2rem;
+  }
+
+  button {
+    padding: 15px 72px;
+    gap: 0.5rem;
+  }
 }
