@@ -1,0 +1,117 @@
+/* - Mobile: 375px
+- Desktop: 1440px
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --primary-dark-cyan-color: hsl(158, 36%, 37%);
+  --primary-bkg-color: hsl(30, 38%, 92%);
+  --white-color: hsl(0, 0%, 100%);
+  --dark-blue: hsl(228, 12%, 48%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --font-fraunces: "Fraunces", serif;
+  --font-monserrat: "Montserrat", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  background-color: var(--primary-bkg-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1.2rem 7rem 2rem 3rem 6rem 1.2rem;
+  grid-template-rows: 15rem repeat(2, 1rem) 5rem 1rem 6rem repeat(3, 2rem) 3rem 1rem;
+  border-radius: 15px;
+  background-color: var(--white-color);
+  overflow: hidden;
+}
+
+picture {
+  grid-column: 1 / 7;
+  grid-row: 1;
+}
+
+picture > img {
+  height: 100%;
+  width: 100%;
+}
+.card {
+  display: contents;
+  grid-column: 2 / 7;
+  grid-row: 3 / 12;
+}
+
+.card__perfume {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--dark-blue);
+  font-family: var(--font-monserrat);
+  letter-spacing: 5px;
+}
+
+.card > h1 {
+  grid-column: 2 / 6;
+  grid-row: 4;
+  font-size: 1.8rem;
+  font-family: var(--font-fraunces);
+  font-weight: 700;
+  align-self: end;
+}
+
+.card > p {
+  grid-column: 2 / 6;
+  grid-row: 6;
+  font-size: 0.8rem;
+  font-family: var(--font-monserrat);
+  line-height: 23px;
+  color: var(--very-dark-blue);
+  font-weight: 500;
+}
+
+.card__price--now {
+  grid-column: 2 / 3;
+  grid-row: 8;
+  color: var(--primary-dark-cyan-color);
+  font-family: var(--font-fraunces);
+  font-size: 1.8rem;
+}
+
+.card__price--before {
+  grid-column: 4 / 5;
+  grid-row: 8;
+  color: var(--dark-blue);
+  text-decoration: line-through;
+  font-family: var(--font-monserrat);
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+button {
+  display: flex;
+  grid-column: 2 / 6;
+  grid-row: 10;
+  background-color: var(--primary-dark-cyan-color);
+  color: var(--white-color);
+  padding: 15px 92px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-monserrat);
+  font-size: 0.9rem;
+}
